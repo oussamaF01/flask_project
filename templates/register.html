@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/EPT_logo.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <h2>EPT</h2>
+                <img src="{{ url_for('static', filename='img/EPT_logo_2.png') }}" width="200px" >
+            </div>
+        </div>
+        <div class="right-panel">
+           <form class="register-form" method="POST" action="{{ url_for('register') }}">
+    <h2>REGISTER</h2>
+    <p>It's completely free</p>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <div class="input-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full_name" placeholder="Your Full Name" required>
+    </div>
+    <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-group">
+        <label for="university">University</label>
+        <input type="text" id="university" name="university" placeholder="University" required>
+    </div>
+    <div class="input-group">
+        <label for="niveau-etude">Level of Study</label>
+        <input type="text" id="niveau-etude" name="niveau_etude" placeholder="Level of Study" required>
+    </div>
+    <button type="submit" class="btn">Create Account</button>
+</form>
+
+        </div>
+    </div>
+</body>
+</html>

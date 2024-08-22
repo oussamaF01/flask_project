@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forum EPT</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/EPT_logo.ico') }}" type="image/x-icon">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Start navbar -->
+    <nav>
+        <div class="container">
+            <ul class="sidebar">
+                <li onclick="closeSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sponsor</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="{{ url_for('static', filename='img/EPT_logo.png') }}" width="45px">
+                </li>
+                <li><a href="#">Form EPT</a></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="#">Sponsor</a></li>
+                <li class="hideOnMobile"><a href="{{ url_for('register') }}">Register</a></li>
+                <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End navbar -->
+
+    <!-- Start banner -->
+    <div class="banner">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Forum EPT</h2>
+<h1>Discover Our Prestigious school</h1>
+<p>Join us to explore the opportunities and experiences offered at our renowned Polytechnic School. Learn about our programs, meet our vibrant community, and see why we’re a leading choice for education.</p>
+
+            <button><a href="{{ url_for('register') }}">Join Us</a></button>
+            <div class="arrow-container">
+            <img src="{{ url_for('static', filename='img/arrow.png') }}" alt="Arrow" class="arrow-down" width="100px"> <!-- Replace with the path to your arrow image -->
+        </div> <!-- Animated arrow -->
+        </div>
+    </div>
+    <!-- End banner -->
+
+    <!-- Start about section -->
+    <div class="about" id ="about">
+    <div  class="container2">
+        <div class="box left">
+            <h1>What is Forum EPT ?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu augue hendrerit, vestibulum nulla vitae, tempor leo. Pellentesque tempus ante nec nulla consequat, non ullamcorper neque tristique. Nam vitae arcu tincidunt, hendrerit lorem at, luctus ipsum. Nullam ac justo dolor. Cras bibendum justo eu est condimentum egestas. Proin euismod sed purus nec imperdiet. Donec finibus tempus est, ac tempor urna. Curabitur eu maximus dui. Fusce eu nisl risus. </p>
+        </div>
+        <div class="box right">
+                <img src="{{ url_for('static', filename='img/EPT_logo.png') }}" width="200px" >
+        </div>
+    </div>
+        </div>
+    <!-- End about section -->
+<!-- our sponsors -->
+  <section class="sponsors-section">
+        <h1>Our Sponsors</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://avatar.iran.liara.run/public/boy?username=Ash" alt="Sponsor 1 Logo" class="card-logo">
+                <h2>Sponsor 1</h2>
+                <p>Description for Sponsor 1.</p>
+            </div>
+            <div class="card">
+                <img src="https://avatar.iran.liara.run/public/boy?username=Ash" alt="Sponsor 2 Logo" class="card-logo">
+                <h2>Sponsor 2</h2>
+                <p>Description for Sponsor 2.</p>
+            </div>
+            <div class="card">
+                <img src="https://avatar.iran.liara.run/public/boy?username=Ash" alt="Sponsor 3 Logo" class="card-logo">
+                <h2>Sponsor 3</h2>
+                <p>Description for Sponsor 3.</p>
+            </div>
+        </div>
+    </section>
+<!--End our sponsors -->
+
+
+    <!-- start location -->
+    <div class="section">
+
+    <div class="box text-box">
+        <h1>Location</h1>
+       <p>Our campus is located at V8HP+VXW, Rue El Khawarizmi, within the historic Site archéologique de Carthage. As part of the Ecole Polytechnique de Tunisie (EPT), our venue combines rich cultural heritage with cutting-edge facilities, providing an inspiring setting for education and innovation.</p>
+    </div>
+    <div class="box map-box">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.4433925490844!2d10.33487297685971!3d36.87973977222454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2b48f93881a11%3A0x65c08df7a3ef6533!2sEcole%20Polytechnique%20de%20Tunisie%20-%20EPT!5e0!3m2!1sfr!2stn!4v1724335442449!5m2!1sfr!2stn"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0">
+        </iframe>
+    </div>
+</div>
+
+
+    <!-- Start footer -->
+
+
+<footer>
+  <div class="container3">
+    <div class="footer-section">
+      <h4>About</h4>
+      <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu augue hendrerit, vestibulum nulla vitae, tempor leo. Pellentesque tempus ante nec nulla consequat, non ullamcorper neque tristique. Nam vitae arcu tincidunt, hendrerit lorem at, luctus ipsum. Nullam ac justo dolor. Cras bibendum justo eu est condimentum egestas. Proin euismod sed purus nec imperdiet. Donec finibus tempus est, ac tempor urna. Curabitur eu maximus dui. Fusce eu nisl risus.
+      </p>
+    </div>
+    <div class="footer-section">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">C</a></li>
+        <li><a href="#">UI Design</a></li>
+        <li><a href="#">PHP</a></li>
+        <li><a href="#">Java</a></li>
+        <li><a href="#">Android</a></li>
+        <li><a href="#">Templates</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright © 2024 All Rights Reserved by EPT.</p>
+    <div class="social-icons">
+      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- end footer -->
+
+    <script src="{{ url_for('static', filename='js/index.js') }}" crossorigin="anonymous"></script>
+
+</body>
+</html>

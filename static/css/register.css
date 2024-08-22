@@ -1,0 +1,114 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container holding both panels */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left panel */
+.left-panel {
+    background: #0D7C66;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel .logo {
+    text-align: center;
+    color: white;
+}
+
+.left-panel .logo h2 {
+    font-size: 2rem;
+}
+
+/* Right panel */
+.right-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+}
+
+.register-form {
+    background-color: #34495e;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    color: white;
+}
+
+.register-form h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.register-form p {
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #7f8c8d;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #bdc3c7;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #95a5a6;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #16a085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        flex: none;
+        width: 100%;
+    }
+}
